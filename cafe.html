@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VL: Soul of South</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!--header-->
+    <header>
+        <nav>
+            <div class="logo">VL:Soul of South</div>
+            <ul class="nav-links" id="navlinks">
+                <li><a href="cafe.html"class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="Popular dishes.html">Popular Dishes</a></li>
+                <li><a href="Menu.html">menu</a></li>
+                <li><a href="Contact us.html">contact Us</a></li>
+
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="middle">
+    <div class="hero">
+    <img src="logo.jpeg"></div>
+
+    <div class="h1">
+        <h1>"life is too short...<br>
+        <h1>make it spicy at<span>VL</span></h1>
+        <button class="hero-btn">Explore Menu</button>
+    
+    
+    </div>
+    </section>
+   
+    
+    
+    <!--javascipt-->
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // active link highlight
+    const links = document.querySelectorAll(".nav-links a");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+        navLinks.classList.remove("show");
+      });
+    });
+  
+         
+        
+    </script>
+</body>
+</html>
